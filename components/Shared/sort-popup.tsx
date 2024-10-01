@@ -8,7 +8,12 @@ interface Props {
 
 export const SortPopUp: React.FC<Props> = ({ className }) => {
   return (
-    <div className={cn("inline-flex cursor-pointer", className)}>
+    <div
+      className={cn(
+        "inline-flex cursor-pointer bg-red-900 rounded-xl p-1",
+        className
+      )}
+    >
       <Accessibility />
       <b>Сортировка:</b>
       <b>по возростанию цены</b>

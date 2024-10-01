@@ -25,17 +25,17 @@ export const ProductCart: React.FC<Props> = ({
   return (
     <div
       className={cn(
-        "group transform transition duration-500 hover:scale-105",
+        "group transform transition duration-500 hover:scale-105 border-solid border-2 border-sky-500 rounded-xl p-5 justify-self-center",
         className
       )}
     >
       <Link href={`/product/${id}`}>
-        <img className="w-[215] h-[215]" src={imgUrl} alt="Пианино" />
+        <img className="w-[215px] h-[215px]" src={imgUrl} alt="Пианино" />
       </Link>
       <Title text={PianoName} size="sm" />
       <b>{StrikethroughPrice}</b>
       <p>{PianoPrice}руб</p>
-      <div>
+      <div className="flex justify-between">
         <Button>В корзину</Button>
         <Accessibility />
       </div>

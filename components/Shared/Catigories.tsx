@@ -26,14 +26,24 @@ export const Catigories: React.FC<Props> = ({ className }) => {
     <Container>
       <Title text="Категории" size="lg" />
       <div className="flex justify-between">
-        <div className={cn("inline-flex gap-5", className)}>
+        <div
+          className={cn(
+            "inline-flex bg-slate-400 rounded-xl gap-2.5 py-1 px-3 ",
+            className
+          )}
+        >
           {CatigoriesPiano.map((i, index) => (
-            <a className={cn("flex")} key={index}>
+            <a
+              className={cn(
+                "flex bg-sky-300 rounded-xl p-1 hover:bg-rose-700 cursor-pointer items-center duration-150"
+              )}
+              key={index}
+            >
               <p>{i}</p>
             </a>
           ))}
         </div>
-        <div>
+        <div className="flex bg-slate-400 rounded-xl p-1.5 items-center gap-1.5">
           <SortPopUp />
           <Button>
             Корзина | <ShoppingCart />
