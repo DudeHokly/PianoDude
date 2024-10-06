@@ -1,4 +1,13 @@
 import { Container, Filters, ProductCart } from "@/components/Shared";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui";
 
 import pianos from "@/public/pianos.json";
 
@@ -26,6 +35,30 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+        <div className="pt-4">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious href="" />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="">1</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="">2</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="">3</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext href="" />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </Container>
     </>
